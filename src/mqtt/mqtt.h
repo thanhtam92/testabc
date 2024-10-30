@@ -15,7 +15,7 @@ void mqtt_send_msg_async(MQTTClient *client, const std::string &topic, const std
 
 void mqtt_enqueue_msg(const std::string& topic, const std::string& payload);
 
-void mqtt_send_msg_queue(MQTTClient *client);
+void mqtt_flush_queue(MQTTClient *client);
 
 void mqtt_subscribe_topic(MQTTClient *client, const std::string &topic);
 

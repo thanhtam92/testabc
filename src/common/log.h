@@ -6,7 +6,7 @@
 namespace onevu {
 namespace Log {
     enum class Level { Debug, Info, Error , Warning };
-    void log( const char* filename, int file_line, Level level, const char* module_name, const char* format, ... );
+    void log( const char* filename, int file_line, Level level, const char* format, ... );
 }
 }
 

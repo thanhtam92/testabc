@@ -1,4 +1,5 @@
-set(COMPONENT_NAME onevu_mqtt)
+
+set(COMPONENT_NAME onevu_trigger)
 
 file(GLOB SRC "*.cpp")
 
@@ -6,7 +7,6 @@ add_library(${COMPONENT_NAME} STATIC ${SRC})
 
 target_link_libraries(${COMPONENT_NAME} 
         onevu_common
-        eclipse-paho-mqtt-c::paho-mqtt3c
         )
 
 install(TARGETS ${COMPONENT_NAME}

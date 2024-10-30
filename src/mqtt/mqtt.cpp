@@ -58,9 +58,9 @@ void mqtt_enqueue_msg(const std::string& topic, const std::string& payload)
     dataEvent.set();
 }
 
-void mqtt_send_msg_queue(MQTTClient *client)
+void mqtt_flush_queue(MQTTClient *client)
 {
-    dataEvent.tryWait(100);
+    dataEvent.tryWait(10);
     for(uint32_t i = 0; i < MAX_SENDING_MSG_NUM; i++)
     {
         if(msg_queue.empty())

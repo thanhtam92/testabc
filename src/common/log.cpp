@@ -15,7 +15,7 @@ namespace onevu {
 namespace Log {
 static Poco::Logger *pLogger = nullptr;
 
-void log( const char* filename, int file_line, Level level, const char* module_name, const char* format, ... ) {
+void log( const char* filename, int file_line, Level level, const char* format, ... ) {
     pLogger = &Poco::Util::Application::instance().logger();
     if(!pLogger) return;
 
@@ -40,6 +40,7 @@ void log( const char* filename, int file_line, Level level, const char* module_n
     }
     
     std::string msg(buffer.get());
+
     switch ( level )
     {
         case Level::Debug:
